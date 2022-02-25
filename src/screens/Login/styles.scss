@@ -66,3 +66,19 @@
         width: 70%;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .left-container{
+        width: 100%;
+        .form{
+            background-color: $gray-color;
+            height: 65vh;
+            bottom: 0px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .right-container{
+        display: none;
+    }
+}
