@@ -1,0 +1,117 @@
+@import "../../config/colors.scss";
+
+.container-dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    background-color: $primary-color;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+.body{
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .tabscontainer{
+        width: 300px;
+        height: 100%;
+        overflow-y: auto;
+        background-color: $gray-color;
+        .tab{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            &:hover{
+                background-color: $disabled-gray;
+                cursor: pointer;
+            }
+            &.active{
+                background-color: $disabled-gray;
+                cursor: pointer;
+            }
+            img{
+                width: 35px;
+                height: 35px;
+            }
+            p{
+                font-weight: 600;
+                margin-left: 15px;
+            }
+        }
+    }
+    .data-container{
+        width: calc(100% - 300px);
+        padding: 20px;
+        box-sizing: border-box;
+        .input-content{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-start;
+            .sign{
+                font-weight: 600;
+                margin-right: 10px;
+            }
+            .converted{
+                font-weight: 600;
+                font-size: 18px;
+                margin-left: -20px;
+            }
+            .input-container{
+                width: 350px;
+                input{
+                    width: 250px;
+                }
+            }
+        }
+        
+        .info{
+            background-color: white;
+            width: auto;
+            width: 80%;
+            margin-top: 60px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-left: 10%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .info-item{
+                padding: 15px;
+                width: 33.33%;
+                border-right: 1px solid $gray-color;
+            }
+            .info-header{
+                font-weight: 600;
+                &.one{
+                    color:#4287f5
+                }
+                &.two{
+                    color:#42f587
+                }
+                &.three{
+                    color:#f54284
+                }
+            }
+            .price{
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
